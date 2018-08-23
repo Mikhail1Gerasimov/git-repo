@@ -1,5 +1,5 @@
 def func_IV_GINI_KS(table,var,target): ### Функция подсчёта IV GINI KS
-
+## Version1
     pt=pd.pivot_table(table,index=[var],values=[target], aggfunc={target:[np.size, np.mean, np.sum]})
 
     pt_s1=pd.DataFrame({var:pt.index.tolist(),'T':pt[target]['size'],'Events':pt[target]['sum'],
